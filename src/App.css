@@ -1,38 +1,162 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Cagliostro&family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Cagliostro&family=Concert+One&family=Diplomata+SC&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans+Condensed:wght@200..900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hdr{
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+.card{
+  /* height: 450px; */
+  border: none;
+  box-shadow: 2px 2px 5px black;
+}
+
+.card-img-top{
+  height: 200px;
+}
+
+
+
+ .circle{
+  border: 6px solid #3498db;
+  border-radius: 50%;
+  border-top: 6px solid whitesmoke; 
+  height: 80px;
+  width: 80px;
+  /* background-color: white; */
+  /* -webkit-animation: spin 2s linear infinite;  */
+  animation: spin 2s linear infinite;
+}
+
+.navbar-brand{
+  font-size: 35px;
+  margin-top: -15px;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-brand span{
+  font-size: 22px;
+  margin: 0px -8px;
+  font-family: "Averia Gruesa Libre", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-item{
+  font-size: 17px;
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-item:hover{
+  text-decoration: underline orange;
+}
+.container h1{
+  font-family: "Diplomata SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+} */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.main{
+  height: 90vh;
+  width: 100%;
+  border: 1px solid black;
+  background: url(./homebg.jpg) no-repeat center center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.609); /* Adjust brightness here */
+  z-index: 0;
+}
+
+.main .home-title{
+  position: relative;
+  z-index: 1;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.home-title h1{
+  font-size: 2.7vw;
   color: white;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.home-title p{
+  margin: 30px 0px;
+  font-size: 1.5vw;
+  color: white;
+  text-align: justify !important;
+  width: 75%;
+  font-family: "Reddit Sans Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 768px) {
+  .home-title h1 {
+    font-size: 5vw; 
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-title p {
+    font-size: 2vw; 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-title h1 {
+    font-size: 6vw; 
+  }
+
+  .home-title p {
+    font-size: 2.5vw; 
+    width: 90%; 
   }
 }
